@@ -8,6 +8,7 @@ module "storage_account" {
     bypass         = ["None"]
     default_action = "Deny"
   }
+}
 
 #  module "private_endpoint" {
 #    source = "git::https://github.com/AMeesCorp-Modules/terraform-azure-pe.git?ref=v3.1.0"
