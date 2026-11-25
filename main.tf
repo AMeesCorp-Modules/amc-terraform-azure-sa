@@ -1,12 +1,14 @@
 module "storage_account" {
   source = "git::https://github.com/AMeesCorp-Modules/terraform-azure-sa.git?ref=v5.0.0"
 
-  shared_access_key_enabled       = false
-  default_to_oauth_authentication = true
+  storage = {
+    shared_access_key_enabled       = false
+    default_to_oauth_authentication = true
 
-  network_rules = {
-    bypass         = ["None"]
-    default_action = "Deny"
+    network_rules = {
+      bypass         = ["None"]
+      default_action = "Deny"
+    }
   }
 }
 
