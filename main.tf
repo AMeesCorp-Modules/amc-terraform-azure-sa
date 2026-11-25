@@ -2,7 +2,7 @@ module "storage_account" {
   source = "git::https://github.com/AMeesCorp-Modules/terraform-azure-sa.git?ref=v5.0.0"
 
   storage = {
-    name                            = var.storage.name
+    name                            = var.config.name
     shared_access_key_enabled       = false
     default_to_oauth_authentication = true
 
